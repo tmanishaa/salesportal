@@ -103,7 +103,7 @@
 	<!-- Register section -->
 	<section class="contact-section" style="width: 100%">
 		<div class="container" style="width: 100%">
-			<h4>Oops something went wrong :-(. Please go back and try again!</h4>
+			<h4><%= session.getAttribute("errmsg") %> Please try again!</h4>
 		</div>
 	</section>
 	<!-- Register section end -->
