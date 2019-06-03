@@ -25,7 +25,6 @@
 <link rel="stylesheet" href="css/animate.css" />
 <link rel="stylesheet" href="css/style.css" />
 
-
 <!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -92,178 +91,22 @@
 	<!-- Page info -->
 	<div class="page-top-info">
 		<div class="container">
-			<h4>Blog</h4>
+			<h4>Register</h4>
 			<div class="site-pagination">
-				<a href="index.html">Home</a> / <a href="blog.html">Blog</a>
+				<a href="index.html">Home</a> / <a href="register.jsp">Register</a>
 			</div>
 		</div>
 	</div>
 	<!-- Page info end -->
 
 
-	<!-- Contact section -->
-	<section class="contact-section">
-		<div class="container">
-			<h1 class="title">A perspective on the wild side</h1>
-			<div class="postmetadata">
-				<span class="text-by">By</span> <span class="author vcard"><a
-					href="blog.html"
-					title="View all posts by Fujifilm" rel="author">Fujifilm</a></span> <span
-					class="text-on">on</span> <a
-					href="blog.html"
-					title="9:00 am" rel="bookmark"><time class="entry-date"
-						datetime="2018-11-13T09:00:01+01:00">November 13, 2018</time></a> <span
-					class="sep">&bull;</span> <span class="commentcount">( <a
-					href="contact.html">Leave
-						a comment</a> )
-				</span>
-			</div>
-			<section>
-				<p>
-					<img
-					 src="img/monkey.jpg" width="1145"/>
-				</p>
-				<h3>
-					<a href="http://bit.ly/2tcV2Hi" target="_blank" rel="noopener"><strong>By
-							Chris Weston</strong></a>
-				</h3>
-				<p>
-					One of the most rewarding parts of my job is making an emotional
-					connection with the wildlife I encounter. One of the most <em>challenging
-					</em>aspects of my job is conveying that connection in a photograph. To
-					do that, I have to make use of a very important compositional tool
-					&#8211; perspective.<span id="more-19666"></span>
-				</p>
-				<p>For me, the starting point for photographing wildlife is
-					choosing my viewpoint &#8211; where I stand or, more commonly,
-					where I sit or lie. I position the camera to compose all the visual
-					elements &#8211; the main subject, and foreground and background
-					detail &#8211; in a particular way to reveal the story I want to
-					tell.</p>
-				<p>
-					<img src="img/blog2.jpg" width="1145"/>
-				</p>
-				<p>If my story is focused on the animal or an aspect of its
-					behaviour, I stand closer to give it visual weight. However, if my
-					story is an environmental study of the animal in its habitat, I
-					might stand further back to create a more balanced weighting.</p>
-				<p>Often, I also find I’m shifting slightly to one side or
-					another, changing the negative space (the area around the main
-					subject) in order to eliminate a distracting object or highlight,
-					or to create separation between overlapping objects.</p>
-				<p>
-					<img src="img/blog3.jpg" width="1145"/>
-				</p>
-				<p>One of the most important decisions I make is deciding on my
-					eye level. Eye level influences the viewer in two ways. In relation
-					to the horizon (implied or explicit) it determines the journey the
-					viewer takes through the picture space. If I position the horizon
-					low down, the eyes are forced to look upwards
-					(foreground-to-background). I would do this, for example, when
-					photographing animals in their environment where there’s a
-					spectacular sky. If the sky is bland or I want to obscure
-					background clutter, I shoot from a higher viewpoint, forcing the
-					viewer to gaze from top to bottom.</p>
-				<p>As well as determining the visual journey, eye-level also
-					affects us psychologically because of a psycho-analytical theory
-					known as the adult/child relationship. Adults gaze down at children
-					and, in the adult/child relationship, are the dominant party.
-					Children, being smaller, look up at adults making them the
-					subservient participant. In an adult-to-adult or child-to-child
-					relationship, where both parties are at the same eye level, neither
-					is dominant nor submissive &#8211; the relationship is one of
-					equality.</p>
-				<p>
-					<img src="img/blog4.jpg" width="1145"/>
-				</p>
-				<p>This psychology spills over into the relationship formed
-					between the viewer and the principal subject in a photograph. With
-					a low eye level, where the subject is looking down at the viewer,
-					the subject is imbued with a sense of power, influence, authority
-					or superiority, which creates an imposing, slightly daunting
-					composition. The opposite applies when eye-level switches from low
-					to high. With this composition, it’s the viewer who takes on the
-					dominant role and the animal becomes more passive and meek. This is
-					the reason I very rarely photograph wildlife from a high eye level.</p>
-				<p>My favourite eye level is eye-to-eye. In this composition,
-					the relationship between subject and viewer is equal. For wildlife,
-					this is the most engaging angle because it helps to recreate the
-					connection I make with my subjects, which is then passed on to the
-					viewer.</p>
-				<p>
-					<img src="img/blog5.jpg" width="1145"/>
-				</p>
-				<p>
-					Once I know my viewpoint, my attention switches to lenses. I should
-					say upfront, although I’m a wildlife photographer, I’m a massive
-					fan of short lenses. In fact, my favourite lens for wildlife
-					photography is the equivalent of a 50mm standard lens and you’ll
-					often find me with my <a
-						href="index.html"
-						target="_blank" rel="noopener"><strong>XF35mmF1.4</strong></a>
-					prime lens attached to my <a href="index.html"
-						target="_blank" rel="noopener"><strong>FUJIFILM X-T2</strong>
-					</a>or <a href="index.html" target="_blank" rel="noopener"><strong>X-H1</strong></a>
-					bodies, or a <a
-						href="index.html"
-						target="_blank" rel="noopener"><strong>GF63mmF2.8</strong></a>
-					prime on a<a href="index.html" target="_blank"
-						rel="noopener"><strong> GFX 50S</strong></a>.
-				</p>
-				<p>The reason I like the “standard” lens is because it most
-					closely replicates our own angle of view. In other words, the
-					camera sees what we see and, because one of my main aims is to
-					visually generate the human/animal connection, by getting close to
-					revealing the situation as you would experience it with your own
-					eyesight; I get closer to putting you in the moment, rather than
-					making you a passive observer of it.</p>
-				<p>
-					<img src="img/blog6.jpg" width="1145"/>
-				</p>
-				<p>
-					Of course, many times it’s impossible to get close enough to use
-					such a short lens and so the lens I use most often on my main
-					bodies (X-T2 and X-H1) is the <a
-						href="index.html"
-						target="_blank" rel="noopener"><strong>XF50-140mmF2.8</strong></a>
-					short/medium telephoto zoom. As well as getting me visually closer,
-					the telephoto aspect of this lens enables me to isolate the subject
-					from the background, creating greater emphasis on the animal. Only
-					when I need a much longer reach, if the animal is very distant,
-					will I switch to the <a
-						href="index.html"
-						target="_blank" rel="noopener"><strong>XF100-400mmF4.5-5.6</strong></a>
-					long telephoto.
-				</p>
-				<p>In life, perspective is how we see the world. In photography,
-					perspective is how we present the world we see. In this sense, our
-					point-of-view, the camera’s point-of-view and the lenses we choose
-					are all intrinsically linked.</p>
-				<p>
-					<img src="img/blog7.jpg" width="1145"/>
-				</p>
-				<p>
-				    <img src="img/blog8.jpg" width="1145"/>
-				</p>
-				<hr />
-				<h3>
-					<strong>More from Chris Weston</strong>
-				</h3>
-				<p>
-					Website: <a href="http://bit.ly/2tcV2Hi" target="_blank"
-						rel="noopener"><strong>https://chrisweston.photography/</strong></a>
-				</p>
-				<p>
-					Twitter: <a href="https://twitter.com/cmwphoto" target="_blank"
-						rel="noopener"><strong>https://twitter.com/cmwphoto</strong></a>
-				</p>
-				<p>
-					Facebook: <a href="https://www.facebook.com/chriswestonphoto/"
-						target="_blank" rel="noopener"><strong>https://www.facebook.com/chriswestonphoto/</strong></a>
-				</p>
+	<!-- Register section -->
+	<section class="contact-section" style="width: 100%">
+		<div class="container" style="width: 100%">
+			<h4>You have registered successfully! You can go the <a href="">login </a>page now!</h4>
 		</div>
 	</section>
-	<!-- Contact section end -->
+	<!-- Register section end -->
 
 
 	<!-- Related product section -->
@@ -435,7 +278,9 @@
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				<p class="text-white text-center mt-5">
 					Copyright &copy;
-					<script>document.write(new Date().getFullYear());</script>
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
 					All rights reserved | This template is made with <i
 						class="fa fa-heart-o" aria-hidden="true"></i> by <a
 						href="https://colorlib.com" target="_blank">Colorlib</a>
