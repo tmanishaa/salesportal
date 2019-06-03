@@ -50,7 +50,7 @@
 					</div>
 					<div class="col-xl-6 col-lg-5">
 						<form class="header-search-form">
-							<input type="text" placeholder="Search on divisima ....">
+							<input type="text" placeholder="Search on Fujifilm ....">
 							<button>
 								<i class="flaticon-search"></i>
 							</button>
@@ -106,7 +106,7 @@
 			<h4>Please enter your employee id if you're an employee. If you're a customer please leave the employee id field blank.</h4>
 			<br />
 			<form action="handlelogin" method="post">
-				<table style="width: 50%; margin: 0 auto;">
+				<table style="margin: 0; background:#F0F8FF !important; border-collapse: separate; border-spacing: 10px;">
 					<tr>
 						<td>UserName*</td>
 						<td><input type="text" name="username" id="username"

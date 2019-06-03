@@ -60,7 +60,7 @@
 					</div>
 					<div class="col-xl-6 col-lg-5">
 						<form class="header-search-form">
-							<input type="text" placeholder="Search on divisima ....">
+							<input type="text" placeholder="Search on Fujifilm ....">
 							<button>
 								<i class="flaticon-search"></i>
 							</button>
@@ -117,7 +117,7 @@
 				registering as an employee then please provide your employee id.</h4>
 			<br />
 			<form action="handleregister" method="post">
-				<table style="width: 50%; margin: 0 auto;">
+				<table style="margin: 0; background:#F0F8FF !important; border-collapse: separate; border-spacing: 10px;">
 					<tr>
 						<td>First Name*</td>
 						<td><input type="text" name="first_name" id="first_name"
