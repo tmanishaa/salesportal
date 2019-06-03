@@ -103,7 +103,7 @@
 	<!-- Register section -->
 	<section class="contact-section" style="width: 100%">
 		<div class="container" style="width: 100%">
-			<h4>You have registered successfully! You can go the <a href="">login </a>page now!</h4>
+			<h4>You have registered successfully! You can go the <a href="login.jsp">login </a>page now!</h4>
 		</div>
 	</section>
 	<!-- Register section end -->

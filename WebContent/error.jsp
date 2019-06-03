@@ -59,8 +59,8 @@
 					<div class="col-xl-4 col-lg-5">
 						<div class="user-panel">
 							<div class="up-item">
-								<i class="flaticon-profile"></i> <a href="#">Sign</a> In or <a
-									href="#">Create Account</a>
+								<i class="flaticon-profile"></i> <a href="login.jsp">Sign</a> or <a
+									href="register.jsp">Create Account</a>
 							</div>
 							<div class="up-item">
 								<div class="shopping-card">
@@ -122,8 +122,8 @@
 							<div class="tag-new">New</div>
 							<img src="./img/product/4.jpg" alt="">
 							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="#" class="wishlist-btn"><i
+								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
+										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
 									class="flaticon-heart"></i></a>
 							</div>
 						</div>
@@ -138,8 +138,8 @@
 						<div class="pi-pic">
 							<img src="./img/product/2.jpg" alt="">
 							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="#" class="wishlist-btn"><i
+								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
+										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
 									class="flaticon-heart"></i></a>
 							</div>
 						</div>
@@ -154,8 +154,8 @@
 						<div class="pi-pic">
 							<img src="./img/product/3.jpg" alt="">
 							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="#" class="wishlist-btn"><i
+								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
+										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
 									class="flaticon-heart"></i></a>
 							</div>
 						</div>
@@ -170,8 +170,8 @@
 						<div class="pi-pic">
 							<img src="./img/product/1.jpg" alt="">
 							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="#" class="wishlist-btn"><i
+								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
+										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
 									class="flaticon-heart"></i></a>
 							</div>
 						</div>
