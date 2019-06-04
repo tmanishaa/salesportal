@@ -69,51 +69,51 @@
 				registering as an employee then please provide your employee id.</h4>
 			<br />
 			<form action="handleregister" method="post">
-				<table style="margin: 0; background:#F0F8FF !important; border-collapse: separate; border-spacing: 10px;">
+				<table style="margin: 0; background:#ADD8E6 !important; border-collapse: separate; border-spacing: 10px; border-radius: 10px !important;">
 					<tr>
 						<td>First Name*</td>
 						<td><input type="text" name="first_name" id="first_name"
-							style="width: 200px !important;" required /></td>
+							style="width: 200px !important; border-radius:10px;" required /></td>
 					</tr>
 					<tr>
 						<td>Last Name*</td>
 						<td><input type="text" name="last_name" id="last_name"
-							style="width: 200px !important;" required /></td>
+							style="width: 200px !important; border-radius:10px;" required /></td>
 					</tr>
 					<tr>
 						<td>Email*</td>
 						<td><input type="text" name="emailid" id="emailid"
-							style="width: 200px !important;" required /></td>
+							style="width: 200px !important; border-radius:10px;" required /></td>
 					</tr>
 					<tr>
 						<td>Address*</td>
 						<td><input type="text" name="address" id="address"
-							style="width: 200px !important;" required /></td>
+							style="width: 200px !important; border-radius:10px;" required /></td>
 					</tr>
 					<tr>
 						<td>Phone*</td>
 						<td><input type="text" name="contact" id="contact"
-							style="width: 200px !important;" required /></td>
+							style="width: 200px !important; border-radius:10px;" required /></td>
 					</tr>
 					<tr>
 						<td>Employee ID</td>
 						<td><input type="text" name="employee_id" id="employee_id"
-							style="width: 200px !important;" placeholder="If applicable" /></td>
+							style="width: 200px !important; border-radius:10px;" placeholder="If applicable" /></td>
 					</tr>
 					<tr>
 						<td>UserName*</td>
 						<td><input type="text" name="username" id="username"
-							style="width: 200px !important;" required /></td>
+							style="width: 200px !important; border-radius:10px;" required /></td>
 					</tr>
 					<tr>
 						<td>Password*</td>
 						<td><input type="password" name="password" id="password"
-							style="width: 200px !important;" required onkeyup="comparePasswords()"/></td>
+							style="width: 200px !important; border-radius:10px;" required onkeyup="comparePasswords()"/></td>
 					</tr>
 					<tr>
 						<td>Confirm Password*</td>
 						<td><input type="password" name="confirm_password"
-							id="confirm_password" style="width: 200px !important;" required  onkeyup="comparePasswords()"/></td>
+							id="confirm_password" style="width: 200px !important; border-radius:10px;" required  onkeyup="comparePasswords()"/></td>
 					</tr>
 					<tr>
 						<td>&nbsp;&nbsp;</td>
@@ -121,7 +121,7 @@
 					</tr>
 					<tr>
 						<td><input type="submit" value="Submit"
-							style="width: 200px !important;" /></td>
+							style="width: 200px !important;" class="site-btn sb-white"/></td>
 						<td></td>
 					</tr>
 				</table>

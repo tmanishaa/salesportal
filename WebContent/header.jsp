@@ -31,12 +31,12 @@
                                     if (who != null && who.length() > 0) 
                                     {
                                   %>
-                                  <a href="logout.jsp">Sign Out <%= who %></a>
+                                  <a href="logout.jsp" style="color: red;">Sign Out</a> <%= who %>
                                   <% } 
                                      else 
                                      {
                                   %>
-								  <a href="login.jsp">Sign</a> In or <a href="register.jsp">Create Account</a>
+								  <a href="login.jsp" style="color: green;">Sign In</a> or <a href="register.jsp">Create Account</a>
 								  <% 
 								     } 
 								  %>
