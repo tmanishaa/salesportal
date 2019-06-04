@@ -79,8 +79,14 @@ public class handlelogin extends HttpServlet {
 							return;
 						}
 					}
-					session.setAttribute("errmsg", username + " login success :-). ");
-					response.sendRedirect("error.jsp");
+					
+					session.setAttribute("who", username);
+					session.setAttribute("errmsg", "");
+					if (isEmployee) {
+					   response.sendRedirect("employee.jsp");
+					} else {
+					   response.sendRedirect("customer.jsp");
+					}
 					return;
 				}
 			}

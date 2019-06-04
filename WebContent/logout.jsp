@@ -32,6 +32,8 @@
 
 </head>
 <body>
+    <% session.removeAttribute("who"); %>
+    
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -43,9 +45,9 @@
 	<!-- Page info -->
 	<div class="page-top-info">
 		<div class="container">
-			<h4>Error</h4>
+			<h4>Logout</h4>
 			<div class="site-pagination">
-				<a href="index.jsp">Home</a>
+				<a href="index.jsp">Home</a> / <a href="login.jsp">Login</a>
 			</div>
 		</div>
 	</div>
@@ -55,7 +57,7 @@
 	<!-- Register section -->
 	<section class="contact-section" style="width: 100%">
 		<div class="container" style="width: 100%">
-			<h4><%= session.getAttribute("errmsg") %> Please try again!</h4>
+			<h4>You have logged out successfully!</h4>
 		</div>
 	</section>
 	<!-- Register section end -->
@@ -138,8 +140,8 @@
 	</section>
 	<!-- Related product section end -->
 
-	<!-- Included footer section -->
-	<jsp:include page="footer.jsp" /> 
+    <!-- Included footer section -->
+	<jsp:include page="footer.jsp" />
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>

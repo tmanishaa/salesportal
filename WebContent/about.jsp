@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>Fuji Film</title>
-<meta charset="UTF-8">
-<meta name="description" content=" Fuji Film">
-<meta name="keywords" content="fujifilm, eCommerce, creative, html">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Favicon -->
-<link href="img/favicon.ico" rel="shortcut icon" />
+	<title>Fuji Film</title>
+	<meta charset="UTF-8">
+	<meta name="description" content=" Fuji Film">
+	<meta name="keywords" content="fujifilm, eCommerce, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
 
-<!-- Google Font -->
-<link
-	href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i"
-	rel="stylesheet">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 
 
-<!-- Stylesheets -->
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/font-awesome.min.css" />
-<link rel="stylesheet" href="css/flaticon.css" />
-<link rel="stylesheet" href="css/slicknav.min.css" />
-<link rel="stylesheet" href="css/jquery-ui.min.css" />
-<link rel="stylesheet" href="css/owl.carousel.min.css" />
-<link rel="stylesheet" href="css/animate.css" />
-<link rel="stylesheet" href="css/style.css" />
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
 
-<!--[if lt IE 9]>
+
+	<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
@@ -38,27 +37,28 @@
 	</div>
 
 	<!-- Included header section -->
-    <jsp:include page="header.jsp" />
+    <jsp:include page="header.jsp" /> 
 
 	<!-- Page info -->
 	<div class="page-top-info">
 		<div class="container">
-			<h4>Error</h4>
+			<h4>About Us</h4>
 			<div class="site-pagination">
-				<a href="index.jsp">Home</a>
+				<a href="index.jsp">Home</a> /
+				<a href="about.jsp">About Us</a>
 			</div>
 		</div>
 	</div>
 	<!-- Page info end -->
 
 
-	<!-- Register section -->
-	<section class="contact-section" style="width: 100%">
-		<div class="container" style="width: 100%">
-			<h4><%= session.getAttribute("errmsg") %> Please try again!</h4>
+	<!-- Contact section -->
+	<section class="contact-section">
+		<div class="container">
+		 <img src="img/aboutus.jpg" width="1145"/>
 		</div>
 	</section>
-	<!-- Register section end -->
+	<!-- Contact section end -->
 
 
 	<!-- Related product section -->
@@ -74,9 +74,8 @@
 							<div class="tag-new">New</div>
 							<img src="./img/product/4.jpg" alt="">
 							<div class="pi-links">
-								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
-									class="flaticon-heart"></i></a>
+								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="login.jsp" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 							</div>
 						</div>
 						<div class="pi-text">
@@ -90,14 +89,13 @@
 						<div class="pi-pic">
 							<img src="./img/product/2.jpg" alt="">
 							<div class="pi-links">
-								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
-									class="flaticon-heart"></i></a>
+								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="login.jsp" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 							</div>
 						</div>
 						<div class="pi-text">
 							<h6>$4,499.00</h6>
-							<p>FUJIFILM GFX 50S</p>
+							<p>FUJIFILM GFX 50S </p>
 						</div>
 					</div>
 				</div>
@@ -106,14 +104,13 @@
 						<div class="pi-pic">
 							<img src="./img/product/3.jpg" alt="">
 							<div class="pi-links">
-								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
-									class="flaticon-heart"></i></a>
+								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="login.jsp" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 							</div>
 						</div>
 						<div class="pi-text">
 							<h6>$3,999.00</h6>
-							<p>FUJIFILM GFX 50R</p>
+							<p>FUJIFILM GFX 50R </p>
 						</div>
 					</div>
 				</div>
@@ -122,14 +119,13 @@
 						<div class="pi-pic">
 							<img src="./img/product/1.jpg" alt="">
 							<div class="pi-links">
-								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
-									class="flaticon-heart"></i></a>
+								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="login.jsp" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 							</div>
 						</div>
 						<div class="pi-text">
 							<h6>$9,999.95</h6>
-							<p>Fujifilm GFX 100</p>
+							<p>Fujifilm GFX 100 </p>
 						</div>
 					</div>
 				</div>
@@ -138,7 +134,7 @@
 	</section>
 	<!-- Related product section end -->
 
-	<!-- Included footer section -->
+    <!-- Included footer section -->
 	<jsp:include page="footer.jsp" /> 
 
 	<!--====== Javascripts & Jquery ======-->
@@ -151,5 +147,5 @@
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/main.js"></script>
 
-</body>
+	</body>
 </html>

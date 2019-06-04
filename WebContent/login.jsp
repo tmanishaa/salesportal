@@ -37,63 +37,15 @@
 		<div class="loader"></div>
 	</div>
 
-	<!-- Header section -->
-	<header class="header-section">
-		<div class="header-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-2 text-center text-lg-left">
-						<!-- logo -->
-						<a href="./index.html" class="site-logo"> <img
-							src="img/logo.png" alt="">
-						</a>
-					</div>
-					<div class="col-xl-6 col-lg-5">
-						<form class="header-search-form">
-							<input type="text" placeholder="Search on Fujifilm ....">
-							<button>
-								<i class="flaticon-search"></i>
-							</button>
-						</form>
-					</div>
-					<div class="col-xl-4 col-lg-5">
-						<div class="user-panel">
-							<div class="up-item">
-								<i class="flaticon-profile"></i> <a href="login.jsp">Sign</a> In or <a
-									href="register.jsp">Create Account</a>
-							</div>
-							<div class="up-item">
-								<div class="shopping-card">
-									<i class="flaticon-bag"></i> <span>0</span>
-								</div>
-								<a href="#">Shopping Cart</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<nav class="main-navbar">
-			<div class="container">
-				<!-- menu -->
-				<ul class="main-menu">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-	<!-- Header section end -->
-
+	<!-- Included header section -->
+    <jsp:include page="header.jsp" />
 
 	<!-- Page info -->
 	<div class="page-top-info">
 		<div class="container">
 			<h4>Login</h4>
 			<div class="site-pagination">
-				<a href="index.html">Home</a> / <a href="login.jsp">Login</a>
+				<a href="index.jsp">Home</a> / <a href="login.jsp">Login</a>
 			</div>
 		</div>
 	</div>
@@ -216,113 +168,8 @@
 	</section>
 	<!-- Related product section end -->
 
-
-	<!-- Footer section -->
-	<section class="footer-section">
-		<div class="container">
-			<div class="footer-logo text-center">
-				<a href="index.html"><img src="./img/logo-light.png" alt=""></a>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>About</h2>
-						<p>At Fujifilm we create innovative products and deliver
-							effective solutions in a wide variety of fields to serve society,
-							contribute to the quality of life, and enhance environmental
-							sustainability.</p>
-						<img src="img/cards.png" alt="">
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Site Map</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Testimonials</h2>
-						<div class="fw-latest-post-widget">
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
-								<div class="lp-content">
-									<h6 style="opacity: 1.0 !important;">No camera can beat
-										Fuji GFX! Thank you Fuji Film.</h6>
-									<span>May 31, 2019</span> <a href="#" class="readmore">Read
-										More</a>
-								</div>
-							</div>
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
-								<div class="lp-content">
-									<h6 style="opacity: 1.0 !important;">Very happy with my
-										Fuji Film XCinema. Simply awesome!</h6>
-									<span>Feb 21, 2019</span> <a href="#" class="readmore">Read
-										More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget contact-widget">
-						<h2>Contact</h2>
-						<div class="con-info">
-							<span>C.</span>
-							<p>Fuji Film Ltd</p>
-						</div>
-						<div class="con-info">
-							<span>B.</span>
-							<p>7-3, Akasaka 9-chome, Minato-ku, Tokyo 107-0052, Japan</p>
-						</div>
-						<div class="con-info">
-							<span>T.</span>
-							<p>+81 3-6271-3350</p>
-						</div>
-						<div class="con-info">
-							<span>E.</span>
-							<p>globalsales@fujifilm.com</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="social-links-warp">
-			<div class="container">
-				<div class="social-links">
-					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
-					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
-					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
-					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
-				</div>
-
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				<p class="text-white text-center mt-5">
-					Copyright &copy;
-					<script>
-						document.write(new Date().getFullYear());
-					</script>
-					All rights reserved | This template is made with <i
-						class="fa fa-heart-o" aria-hidden="true"></i> by <a
-						href="https://colorlib.com" target="_blank">Colorlib</a>
-				</p>
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-			</div>
-		</div>
-	</section>
-	<!-- Footer section end -->
-
-
+	<!-- Included footer section -->
+	<jsp:include page="footer.jsp" /> 
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
