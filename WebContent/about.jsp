@@ -1,3 +1,10 @@
+<%
+HttpServletResponse httpResponse = (HttpServletResponse) response;
+httpResponse.setHeader("Cache-Control", "max-age=0, max-stale=0, min-fresh=0, private, no-cache, no-store, must-revalidate"); // HTTP 1.1
+httpResponse.setHeader("Pragma", "no-cache"); // HTTP 1.0
+httpResponse.setDateHeader("Expires", 0);
+%> 
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -6,6 +13,7 @@
 	<meta name="description" content=" Fuji Film">
 	<meta name="keywords" content="fujifilm, eCommerce, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
 
@@ -22,6 +30,14 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
+	
+	<script>
+	window.onpageshow = function(event) {
+	    if (event.persisted) {
+	        window.location.reload() 
+	    }
+	};
+	</script>
 
 
 	<!--[if lt IE 9]>
