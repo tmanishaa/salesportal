@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  * Servlet implementation class handlelogin
@@ -39,7 +42,7 @@ public class handlelogin extends HttpServlet {
 		boolean isEmployee = false;
 		HttpSession session = request.getSession();
 		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String password = DigestUtils.sha256Hex(request.getParameter("password"));
 		String employeeid = request.getParameter("employee_id");
 		if (employeeid.length() > 0) {
 			isEmployee = true;
