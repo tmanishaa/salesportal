@@ -57,17 +57,7 @@ httpResponse.setDateHeader("Expires", 0);
 	<!-- Included header section -->
     <jsp:include page="header.jsp" />
 
-	<!-- Page info -->
-	<div class="page-top-info">
-		<div class="container">
-			<h4>Customer</h4>
-			<div class="site-pagination">
-				<a href="index.jsp">Home</a> / <a href="customer.jsp">Customer</a>
-			</div>
-		</div>
-	</div>
-	<!-- Page info end -->
-
+	
 
 	<!-- Register section -->
 	<section class="contact-section" style="width: 100%">

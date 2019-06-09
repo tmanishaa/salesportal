@@ -56,17 +56,6 @@ httpResponse.setDateHeader("Expires", 0);
 	<!-- Included header section -->
     <jsp:include page="header.jsp" />
 
-	<!-- Page info -->
-	<div class="page-top-info">
-		<div class="container">
-			<h4>Error</h4>
-			<div class="site-pagination">
-				<a href="index.jsp">Home</a>
-			</div>
-		</div>
-	</div>
-	<!-- Page info end -->
-
 
 	<!-- Register section -->
 	<section class="contact-section" style="width: 100%">
@@ -76,83 +65,6 @@ httpResponse.setDateHeader("Expires", 0);
 	</section>
 	<!-- Register section end -->
 
-
-	<!-- Related product section -->
-	<section class="related-product-section spad">
-		<div class="container">
-			<div class="section-title">
-				<h2>Your Favorites</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<div class="tag-new">New</div>
-							<img src="./img/product/4.jpg" alt="">
-							<div class="pi-links">
-								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
-									class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$999.00</h6>
-							<p>FUJIFILM X-T30</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="./img/product/2.jpg" alt="">
-							<div class="pi-links">
-								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
-									class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$4,499.00</h6>
-							<p>FUJIFILM GFX 50S</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="./img/product/3.jpg" alt="">
-							<div class="pi-links">
-								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
-									class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$3,999.00</h6>
-							<p>FUJIFILM GFX 50R</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="./img/product/1.jpg" alt="">
-							<div class="pi-links">
-								<a href="login.jsp" class="add-card"><i class="flaticon-bag"></i><span>ADD
-										TO CART</span></a> <a href="login.jsp" class="wishlist-btn"><i
-									class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$9,999.95</h6>
-							<p>Fujifilm GFX 100</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Related product section end -->
 
 	<!-- Included footer section -->
 	<jsp:include page="footer.jsp" /> 
