@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import Fujifilm.Connection.ConnectionManager;
 
 
@@ -38,7 +40,7 @@ public class handleregister extends HttpServlet {
 		String contact = request.getParameter("contact");
 		String employeeid = request.getParameter("employee_id");
 		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String password = DigestUtils.sha256Hex(request.getParameter("password"));
 		if (employeeid.length() > 0) {
 			isEmployee = true;
 		}

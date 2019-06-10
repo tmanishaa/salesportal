@@ -36,7 +36,7 @@ public class handlelogin extends HttpServlet {
 		request.getSession().invalidate();
 		HttpSession session = request.getSession();
 		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String password = DigestUtils.sha256Hex(request.getParameter("password"));
 		String employeeid = request.getParameter("employee_id");
 		if (employeeid.length() > 0) {
 			isEmployee = true;
