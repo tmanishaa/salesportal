@@ -82,6 +82,14 @@ public class handlelogin extends HttpServlet {
 					}
 
 					session.setAttribute("who", username);
+					if(isEmployee) {
+						session.setAttribute("hdr", "employee.jsp");	
+						session.setAttribute("hdrlink", "Employee");
+					}
+					else {
+						session.setAttribute("hdr", "customer.jsp");
+						session.setAttribute("hdrlink", "Customer");
+					}
 					session.setAttribute("errmsg", "");
 					if (isEmployee) {
 						response.sendRedirect("employee.jsp");
