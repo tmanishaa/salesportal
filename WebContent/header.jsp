@@ -56,6 +56,9 @@
 			<!-- menu -->
 			<ul class="main-menu">
 				<li><a href="index.jsp">Home</a></li>
+				<li><a href="blog.jsp">Blog</a></li>
+				<li><a href="about.jsp">About Us</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
 				<%
 					String hdrfile = null;
 					if (session != null) {
@@ -66,10 +69,37 @@
 					if (hdrfile != null && hdrfile.length() > 0) {
 				%>
 				<li><a href="<%= session.getAttribute("hdr") %>"><%= session.getAttribute("hdrlink") %></a></li>
-				<% } %>
-				<li><a href="blog.jsp">Blog</a></li>
-				<li><a href="about.jsp">About Us</a></li>
-				<li><a href="contact.jsp">Contact</a></li>
+				<%  
+					}
+					
+				if (session.getAttribute("hdrlink") != null && 
+					session.getAttribute("hdrlink").toString().contentEquals("Employee")) {
+					%>
+					
+					<li><a href="inquiry.jsp">Inquiry</a></li>
+					<li><a href="quotation.jsp">Quotation</a></li>
+					<li><a href="purchaseorder.jsp">Purchase Order</a></li>
+					<li><a href="salesorder.jsp">Sales Order</a></li>
+					<li><a href="delivery.jsp">Delivery Order</a></li>
+					<li><a href="goodsissue.jsp">Goods Issue</a></li>
+					<li><a href="invoice.jsp">Invoice</a></li>
+					<li><a href="payment.jsp">Payment</a></li>
+					<li><a href="receipt.jsp">Payment Receipt</a></li>
+					<li><a href="salesreport.jsp">Sales Report</a></li>
+					<%
+					
+				} else if (session.getAttribute("hdrlink") != null && 
+				           session.getAttribute("hdrlink").toString().contentEquals("Customer")) {
+					%>
+					<li><a href="inquiry.jsp">Inquiry</a></li>
+					<li><a href="quotation.jsp">Quotation</a></li>
+					<li><a href="purchaseorder.jsp">Purchase Order</a></li>
+					<li><a href="invoice.jsp">Invoice</a></li>
+					<li><a href="payment.jsp">Payment</a></li>
+					<li><a href="receipt.jsp">Payment Receipt</a></li>
+					<%
+				}
+			    %>
 			</ul>
 		</div>
 	</nav>

@@ -58,7 +58,7 @@ httpResponse.setDateHeader("Expires", 0);
 	</div>
 
 	<!-- Included header section -->
-    <jsp:include page="EmployeeView.jsp" />
+    <jsp:include page="header.jsp" />
 
 	
 

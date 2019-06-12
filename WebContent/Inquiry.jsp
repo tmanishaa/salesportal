@@ -97,7 +97,7 @@
 	</div>
 
 	<!-- Included header section -->
-	<jsp:include page="CustomerView.jsp" />
+	<jsp:include page="header.jsp" />
 
 	<!-- Page info -->
 	<div class="page-top-info">
