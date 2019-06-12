@@ -7,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,28 +16,21 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
-/**
- * Servlet implementation class handleregister
- */
+import Fujifilm.Connection.ConnectionManager;
+
+
+
 @WebServlet("/handleregister")
 public class handleregister extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public handleregister() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+			}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		boolean isEmployee = false;
 		HttpSession session = request.getSession();
 		String firstname = request.getParameter("first_name");
@@ -57,15 +49,15 @@ public class handleregister extends HttpServlet {
 			response.sendRedirect("error.jsp");
 			return;
 		}
-		Connection con = null;
+		Connection conn = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fujifilm?serverTimezone=UTC", "root", "");
+			 conn = ConnectionManager.getCustConnection();
+			System.out.println(conn);
 			PreparedStatement preparedStmt;
 			String cquery = "insert into customer (first_name, last_name, emailid, address, contact, username, password) values (?,?,?,?,?,?,?)";
 			String equery = "insert into employee (first_name, last_name, emailid, address, contact, employeeid, username, password) values (?,?,?,?,?,?,?,?)";
 			if (isEmployee) {
-				preparedStmt = con.prepareStatement(equery);
+				preparedStmt = conn.prepareStatement(equery);
 				preparedStmt.setString(1, firstname);
 				preparedStmt.setString(2, lastname);
 				preparedStmt.setString(3, emailid);
@@ -75,7 +67,7 @@ public class handleregister extends HttpServlet {
 				preparedStmt.setString(7, username);
 				preparedStmt.setString(8, password);
 			} else {
-				preparedStmt = con.prepareStatement(cquery);
+				preparedStmt = conn.prepareStatement(cquery);
 				preparedStmt.setString(1, firstname);
 				preparedStmt.setString(2, lastname);
 				preparedStmt.setString(3, emailid);
@@ -96,25 +88,16 @@ public class handleregister extends HttpServlet {
 			response.sendRedirect("error.jsp");
 			return;
 		} finally {
-			if (con != null) {
+			if (conn != null) {
 				try {
-					con.close();
+					conn.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 			}
 		}
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }

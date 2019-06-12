@@ -17,29 +17,23 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
-/**
- * Servlet implementation class handlelogin
- */
+import com.mysql.cj.Session;
+
+import Fujifilm.Connection.ConnectionManager;
+
 @WebServlet("/handlelogin")
 public class handlelogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public handlelogin() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		boolean isEmployee = false;
+		request.getSession().invalidate();
 		HttpSession session = request.getSession();
 		String username = request.getParameter("username");
 		String password = DigestUtils.sha256Hex(request.getParameter("password"));
@@ -52,22 +46,26 @@ public class handlelogin extends HttpServlet {
 			response.sendRedirect("error.jsp");
 			return;
 		}
-		Connection con = null;
+		Connection conn = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fujifilm?serverTimezone=UTC", "root", "");
+			conn = ConnectionManager.getCustConnection();
+			System.out.println(conn);
 			PreparedStatement preparedStmt = null;
 			ResultSet rs;
 			String equery = "select password,employeeid from employee where username=?";
 			String cquery = "select password from customer where username=?";
+			
+			
+			
 			if (isEmployee) {
-				preparedStmt = con.prepareStatement(equery);
+				preparedStmt = conn.prepareStatement(equery);
 				preparedStmt.setString(1, username);
 				rs = preparedStmt.executeQuery();
 			} else {
-				preparedStmt = con.prepareStatement(cquery);
+				preparedStmt = conn.prepareStatement(cquery);
 				preparedStmt.setString(1, username);
 				rs = preparedStmt.executeQuery();
+				
 			}
 			while (rs.next()) {
 				if (!rs.getString(1).equals(password)) {
@@ -82,7 +80,7 @@ public class handlelogin extends HttpServlet {
 							return;
 						}
 					}
-					
+
 					session.setAttribute("who", username);
 					if(isEmployee) {
 						session.setAttribute("hdr", "employee.jsp");	
@@ -94,9 +92,9 @@ public class handlelogin extends HttpServlet {
 					}
 					session.setAttribute("errmsg", "");
 					if (isEmployee) {
-					   response.sendRedirect("employee.jsp");
+						response.sendRedirect("employee.jsp");
 					} else {
-					   response.sendRedirect("customer.jsp");
+						response.sendRedirect("customer.jsp");
 					}
 					return;
 				}
@@ -110,25 +108,14 @@ public class handlelogin extends HttpServlet {
 			response.sendRedirect("error.jsp");
 			return;
 		} finally {
-			if (con != null) {
+			if (conn != null) {
 				try {
-					con.close();
+					conn.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }
