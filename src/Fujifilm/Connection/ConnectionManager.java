@@ -11,9 +11,9 @@ public class ConnectionManager {
 	public static Connection getCustConnection() {
 
 		try {
-			url = "jdbc:mysql://127.0.0.1:3306/fujifilm?useSSL=false";
+			url = "jdbc:mysql://127.0.0.1:3306/fujifilm?serverTimezone=UTC&useSSL=false";
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection(url, "root", "1995");
+			conn = DriverManager.getConnection(url, "root", "");
 			System.out.println(conn);
 		} catch (ClassNotFoundException e) {
 

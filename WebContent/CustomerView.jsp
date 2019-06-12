@@ -31,7 +31,7 @@
                                     if (who != null && who.length() > 0) 
                                     {
                                   %>
-                                  <a href="logout.jsp" style="color: red;">Sign Out, <%= who %></a>
+                                  <a href="logout.jsp" style="color: red;">Sign Out</a> <%= who %>
                                   <% } 
                                      else 
                                      {
@@ -57,8 +57,8 @@
 			<div class="container">
 				<!-- menu -->
 				<ul class="main-menu">
-					<li><a href="Inquiry.jsp">Inquiry</a></li>
-					<li><a href="blog.jsp">Quotation</a></li>
+					<li><a href="inquiry.jsp">Inquiry</a></li>
+					<li><a href=".jsp">Quotation</a></li>
 					<li><a href="about.jsp">Purchase Order</a></li>
 					<li><a href="contact.jsp">Invoice</a></li>
 					<li><a href="contact.jsp">Payment</a></li>
