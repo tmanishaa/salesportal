@@ -91,11 +91,12 @@
 				} else if (session.getAttribute("hdrlink") != null && 
 				           session.getAttribute("hdrlink").toString().contentEquals("Customer")) {
 					%>
-					<li><a href="inquiry.jsp">Inquiry</a></li>
-					<li><a href="quotation.jsp">Quotation</a></li>
-					<li><a href="purchaseorder.jsp">Purchase Order</a></li>
-					<li><a href="invoice.jsp">Invoice</a></li>
-					<li><a href="payment.jsp">Payment</a></li>
+					<li><a href="customerinquiry.jsp">Inquiry</a></li>
+					<li><a href="customerquotation.jsp">Quotation</a></li>
+					<li><a href="customerpurchaseorder.jsp">Purchase Order</a></li>
+					<li><a href="customerdelivery.jsp">Delivery Order</a></li>
+					<li><a href="customerinvoice.jsp">Invoice</a></li>
+					<li><a href="customerpayment.jsp">Payment</a></li>
 					<li><a href="receipt.jsp">Payment Receipt</a></li>
 					<%
 				}
