@@ -56,14 +56,18 @@
 		// First seven rows are first_name,last_name etc.
 		var rowCount = table.rows.length;
 		var idx = rowCount - 7;
+		
 		var row = table.insertRow(rowCount);
+		
 		var cell1 = row.insertCell(0);
-		//var sno = document.createElement("input");
-		//sno.type = "text";
-		//sno.id = "sno[" + idx + "]";
-		//sno.name = "sno[" + idx + "]";
-		//sno.style.display = "none";
-		//cell1.appendChild(sno);
+		var sno = document.createElement("input");
+		sno.readOnly = true;
+		sno.type = "number";
+		sno.id = "sno[" + idx + "]";
+		sno.name = "sno[" + idx + "]";
+		sno.value = idx + 1;
+		cell1.appendChild(sno);
+		
 		var cell2 = row.insertCell(1);
 		var pname = document.createElement("select");
 		var elemen = document.getElementById("selectbox[0]");
@@ -72,12 +76,14 @@
 		pname.onchange = function() { populateProductId(idx) };
 		pname.innerHTML = pname.innerHTML + elemen.innerHTML;
 		cell2.appendChild(pname);
+		
 		var cell3 = row.insertCell(2);
 		var pno = document.createElement("input");
 		pno.type = "text";
 		pno.id = "pno[" + idx + "]";
 		pno.name = "pno[" + idx + "]";
 		cell3.appendChild(pno);
+		
 		var cell4 = row.insertCell(3);
 		var Qty = document.createElement("input");
 		Qty.type = "number";
@@ -97,14 +103,6 @@
 
 </head>
 <body>
-
-	<%
-		int clicks;
-		Random rand = new Random();
-		clicks = rand.nextInt(90000) + 10000;
-		session.getAttribute("cId");
-		session.setAttribute("clicks", clicks);
-	%>
 	<%
 		try {
 			ResultSet resultset;
@@ -147,7 +145,7 @@
 					<tr>
 						<td><b>Last Name :</b></td>
 						<td><input type="text" name="lastname" id="lastname" value="<%= session.getAttribute("last_name") %>" required/></td>
-						<td><b>Inquiry No: #INO<%=clicks%></b></td>
+						<td><b>Inquiry No: #INO</b></td>
 					</tr>
 					<tr>
 						<td><b>Address :</b></td>
@@ -172,7 +170,7 @@
 					</tr>
 
 					<tr>
-					    <td></td>	
+					    <td><input type="number" name="sno[0]" id="sno[0]" value="1" readOnly></td>	
 						<td><select id="selectbox[0]" onchange="populateProductId(0);" name="selectbox[0]">
 								<option>---- Select Product ----</option>
 								<%

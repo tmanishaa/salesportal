@@ -66,7 +66,7 @@ httpResponse.setDateHeader("Expires", 0);
 	<section class="contact-section" style="width: 100%">
 		<div class="container" style="width: 100%">
 			<h4>You have logged out successfully!</h4>
-		</div>
+		</div><br/><br/>
 	</section>
 	<!-- Register section end -->
 
