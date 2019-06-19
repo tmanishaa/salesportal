@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Enumeration;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,40 +15,35 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import Fujifilm.Connection.ConnectionManager;
 
-@WebServlet("/handleinquiry")
-public class handleinquiry extends HttpServlet {
+@WebServlet("/handlecustomerinquiry")
+public class handlecustomerinquiry extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		HttpSession session = request.getSession();
-		int numrows = (Integer) session.getAttribute("numrows");
-		session.setAttribute("numrows", numrows);
+		Enumeration<String> params = request.getParameterNames(); 
+		while(params.hasMoreElements()){
+		 String paramName = params.nextElement();
+		 System.out.println("Parameter Name - "+paramName+", Value - "+request.getParameter(paramName));
+		}
+		int numrows = Integer.parseInt(request.getParameter("numrows"));
+		String username = (String) session.getAttribute("who");
 		for (int i = 0; i < numrows; i++) {
-			int productId = (Integer) session.getAttribute("pno[" + i + "]");
-			int qty = (Integer) session.getAttribute("qty[" + i + "]");
+			int productId = Integer.parseInt(request.getParameter("pno[" + i + "]"));
+			int qty = Integer.parseInt(request.getParameter("qty[" + i + "]"));
 			Connection conn = null;
 			try {
 				conn = ConnectionManager.getCustConnection();
 				System.out.println(conn);
 				PreparedStatement preparedStmt = null;
-				ResultSet rs;
-				
-				String qry = "select product_name,price from fujifilm.product where product_id = ?";
+				String qry = "insert into inquiry (customer_username,qty,dt_customer,product_id) VALUES (?,?,NOW(),?)";
 				preparedStmt = conn.prepareStatement(qry);
-				preparedStmt.setInt(1, productId);
-				rs = preparedStmt.executeQuery();
-				while (rs.next()) {
-					String pname = rs.getString(1);
-					double price = rs.getDouble(2);
-					double totalPrice = price * qty;
-					session.setAttribute("productId[" + i + "]", productId);
-					session.setAttribute("productName[" + i + "]", pname);
-					session.setAttribute("qty[" + i + "]", qty);
-					session.setAttribute("totalPrice[" + i + "]", totalPrice);
-					break;
-				}
+				preparedStmt.setString(1, username);
+				preparedStmt.setInt(2, qty);
+				preparedStmt.setInt(3, productId);
+				preparedStmt.execute();
 			}
 			catch (Exception e) {
 				e.printStackTrace();
@@ -60,6 +57,7 @@ public class handleinquiry extends HttpServlet {
 				}
 			}
 		}
+		response.sendRedirect("customerquotation.jsp");
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

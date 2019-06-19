@@ -53,38 +53,40 @@
 	
 	function addRow(tableID) {
 		var table = document.getElementById(tableID);
+		// First seven rows are first_name,last_name etc.
 		var rowCount = table.rows.length;
-		var index = rowCount;
+		var idx = rowCount - 7;
 		var row = table.insertRow(rowCount);
 		var cell1 = row.insertCell(0);
-		var sno = document.createElement("input");
-		sno.type = "text";
-		sno.id = "sno[" + index + "]";
-		sno.name = "sno[" + index + "]";
-		sno.style.display = "none";
-		cell1.appendChild(sno);
+		//var sno = document.createElement("input");
+		//sno.type = "text";
+		//sno.id = "sno[" + idx + "]";
+		//sno.name = "sno[" + idx + "]";
+		//sno.style.display = "none";
+		//cell1.appendChild(sno);
 		var cell2 = row.insertCell(1);
 		var pname = document.createElement("select");
 		var elemen = document.getElementById("selectbox[0]");
-		var ele = document.createElement("option");
-		pname.id = "selectbox[" + index + "]";
-		pname.name = "selectbox[" + index + "]";
-		pname.onchange = function() { populateProductId(index) };
+		pname.id = "selectbox[" + idx + "]";
+		pname.name = "selectbox[" + idx + "]";
+		pname.onchange = function() { populateProductId(idx) };
 		pname.innerHTML = pname.innerHTML + elemen.innerHTML;
 		cell2.appendChild(pname);
 		var cell3 = row.insertCell(2);
 		var pno = document.createElement("input");
 		pno.type = "text";
-		pno.id = "pno[" + index + "]";
-		pno.name = "pno[" + index + "]";
+		pno.id = "pno[" + idx + "]";
+		pno.name = "pno[" + idx + "]";
 		cell3.appendChild(pno);
 		var cell4 = row.insertCell(3);
 		var Qty = document.createElement("input");
 		Qty.type = "number";
-		Qty.id = "qty[" + index + "]";
-		Qty.name = "qty[" + index + "]";
+		Qty.id = "qty[" + idx + "]";
+		Qty.name = "qty[" + idx + "]";
 		Qty.min = 0;
 		cell4.appendChild(Qty);
+		var numrows = document.getElementById("numrows");
+		numrows.value = parseInt(numrows.value) + 1;
 	}
 </script>
 
@@ -125,7 +127,7 @@
 	<!-- Inquiry section -->
 	<section class="contact-section" style="width: 100%">
 		<div class="container" style="width: 100%">
-			<form action="handleinquiry" method="post"
+			<form action="handlecustomerinquiry" method="post"
 				style="border: 2px solid red" id="f">
 
 				<table class="table" id="dataTable">
@@ -136,29 +138,28 @@
 							</h3></td>
 					</tr>
 					<tr>
-
 						<td><b>First name :</b></td>
-						<td><input type="text" name="Username" required="required" /></td>
+						<td><input type="text" name="username" id="username" required="required" value="<%= session.getAttribute("first_name") %>"/></td>
 
 						<td><b>Date: <%=(new java.util.Date()).toLocaleString()%>
 						</b></td>
 					</tr>
 					<tr>
 						<td><b>Last Name :</b></td>
-						<td><input type="text" name="lastName" required="required" /></td>
+						<td><input type="text" name="lastname" id="lastname" value="<%= session.getAttribute("last_name") %>" required/></td>
 						<td><b>Inquiry No: #INO<%=clicks%></b></td>
 					</tr>
 					<tr>
 						<td><b>Address :</b></td>
-						<td><input type="text" name="address" required="required" /></td>
+						<td><input type="text" name="address" value="<%= session.getAttribute("address") %>" required /></td>
 					</tr>
 					<tr>
 						<td><b>Mobile No :</b></td>
-						<td><input type="text" name="mobile" required="required" /></td>
+						<td><input type="text" name="mobile" value="<%= session.getAttribute("contact") %>" required /></td>
 					</tr>
 					<tr>
 						<td><b>Email id :</b></td>
-						<td><input type="email" name="email" required="required" /></td>
+						<td><input type="email" name="email" value="<%= session.getAttribute("emailid") %>" required /></td>
 					</tr>
 
 					<tr>
@@ -187,15 +188,16 @@
  		out.println("wrong entry" + e);
  	}
  %></td>
-						<td><input type="number" required="required" name="pno[0]" id="pno[0]" value="" disabled></td>
+						<td><input type="text" name="pno[0]" id="pno[0]" value=""></td>
 						<td><input type="number" name="qty[0]" id="qty[0]" min=0 required></td>
 						
 						<td><input type="button" value="Add" id="add[0]"
 							onclick="addRow('dataTable');"></td>
 						<td colspan="4"></td>
 					</tr>
-
 				</table>
+				
+				<input type="number" id="numrows" name="numrows" value=1 hidden="true">
 
 				<div align="center">
 					<button class="site-btn">

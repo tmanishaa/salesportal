@@ -52,10 +52,8 @@ public class handlelogin extends HttpServlet {
 			System.out.println(conn);
 			PreparedStatement preparedStmt = null;
 			ResultSet rs;
-			String equery = "select password,employeeid from employee where username=?";
-			String cquery = "select password from customer where username=?";
-			
-			
+			String equery = "select password,first_name,last_name,address,contact,emailid,employeeid from employee where username=?";
+			String cquery = "select password,first_name,last_name,address,contact,emailid from customer where username=?";
 			
 			if (isEmployee) {
 				preparedStmt = conn.prepareStatement(equery);
@@ -74,7 +72,7 @@ public class handlelogin extends HttpServlet {
 					return;
 				} else {
 					if (isEmployee) {
-						if (!rs.getString(2).equals(employeeid)) {
+						if (!rs.getString(7).equals(employeeid)) {
 							session.setAttribute("errmsg", username + " login failed :-(. Could not find employeeid. ");
 							response.sendRedirect("error.jsp");
 							return;
@@ -82,6 +80,11 @@ public class handlelogin extends HttpServlet {
 					}
 
 					session.setAttribute("who", username);
+					session.setAttribute("first_name", rs.getString(2));
+					session.setAttribute("last_name", rs.getString(3));
+					session.setAttribute("address", rs.getString(4));
+					session.setAttribute("contact", rs.getString(5));
+					session.setAttribute("emailid", rs.getString(6));
 					if(isEmployee) {
 						session.setAttribute("hdr", "employee.jsp");	
 						session.setAttribute("hdrlink", "Employee");

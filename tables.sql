@@ -18,9 +18,9 @@ contact varchar(255) not null, username varchar(255) not null unique, password v
 
 drop table product;
 create table product (product_id int auto_increment primary key,
-product_name varchar(255) unique,price number(45),Qty int(50));
+product_name varchar(255) unique, price double, qty int);
 
-insert into product (product_name, price, Qty)
+insert into product (product_name, price, qty)
 VALUES
 ("Fujifilm GFX 100",9999.95,50),
 ("Fujifilm X-T30",999.0,80),
@@ -34,4 +34,16 @@ VALUES
 ("Fujifilm LTO ULTRIUM 7",67.00,200),
 ("Fujifilm PRIMA T2",5500.00,100),
 ("Fujifilm XF 18-135mm f",699.00,85),
-("Fujifilm X-T1",3999.00,250)
+("Fujifilm X-T1",3999.00,250);
+
+drop table inquiry;
+create table inquiry (
+id int auto_increment primary key, 
+customer_username varchar(255), 
+employee_username varchar(255), 
+qty int, 
+dt_customer datetime,
+dt_employee datetime, 
+total_price float, 
+product_id int);
+  
